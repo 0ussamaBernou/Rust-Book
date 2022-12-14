@@ -23,8 +23,8 @@ fn main() {
         .read_line(&mut unit)
         .expect("couldn't read line!");
 
-    let unit = unit.trim();
-    dbg!(unit);
+    let unit = unit.trim().to_lowercase();
+    dbg!(&unit);
 
     if unit == "f" {
         println!("temperature in Celsius is : {}°c", f_to_c(temp));
